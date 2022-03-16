@@ -1,0 +1,13 @@
+<h1>Destinations</h1>
+
+<% if @current_user %>
+  
+<% for place in @places %>
+<li><a href="/places/<%= place.id %>"><%= place.name %></a></li>
+<% end %>
+
+<a href="/places/new" class="btn btn-success">New Destination</a>
+
+<% else %>
+Log in or Sign Up
+<% end %>
